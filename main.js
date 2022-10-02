@@ -1,17 +1,16 @@
 addEventListener("DOMContentLoaded", ()=>{
-    // 3. Desarrollar un diagrama que lea 3 valores diferentes e indique cual es el mayor de ellos, el menor o si son iguales.
-    mayor = 0
-    menor = 1000000
-    for(i = 0; i <= 2; i++){
-        let num = Number(prompt("Ingrese número:"))
-        if(num > mayor){
-            mayor = num
-        }
-        if(num < menor){
-            menor = num
-        }
-
+    // 4. Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    // ¿Qué figura quiere calcular (Escriba T o C)?
+    // Triangulo = base * altura / 2
+    // Circulo = PI * radio* radio
+    let figura = Number(prompt("Escoge una opción: \n 1.Triángulo \n 2.Círculo"))
+    if(figura == 1){
+        let b = Number(prompt("Ingrese la base del triángulo:"))
+        let h = Number(prompt("Ingrese la altura del triángulo:"))
+        console.log(`El área de la figura es ${(b*h)/2}`)
     }
-
-    console.log(`El número mayor es: ${mayor} , El número menor es: ${menor}`)
+    if(figura == 2){
+        let r = Number(prompt("Ingrese el radio del círculo:"))
+        console.log(`El área de la figura es ${(Math.PI)*r**2}`)
+    }
   })
