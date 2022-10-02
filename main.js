@@ -1,12 +1,26 @@
 addEventListener("DOMContentLoaded", ()=>{
-    //12. Restarle al primer número al segundo (siempre y cuando el primero sea mayor que él segundo, en caso contrario indicar con un mensaje que la operación no es posible realizarla.
-    let num1 = Number(prompt("Número 1:")) 
-    let num2 = Number(prompt("Número 2"))
-    if(num1 > num2){
-        console.log(`Como el primer número es mayor se le resta el número 2, el resultado sería:${num1-num2}`)
+    //13. En una tienda de HELADO da un descuento por compra a sus clientes con membresía dependiendo de su tipo, sólo existen tres tipos de membresía, tipo A, tipo B y tipo C.
+    // Los descuentos son los siguientes: Tipo A 10% de descuento Tipo B 15% de descuento Tipo C 20% de descuento
+    let valor = Number(prompt("Ingrese valor de compra:"))
+    let escoge = prompt("¿Tiene membresía? si - no")
+    if(escoge=="si"){
+        let membresía = prompt("¿Qué tipo de membresía tiene? A , B o C") 
+        if(membresía == "A"){
+            desc= valor*0.10
+            console.log(`Por ser de membresía A tiene un descuento del 10%, el total a pagar es ${valor-desc}`)
+        }
+        else if(membresía == "B"){
+            desc= valor*0.15
+            console.log(`Por ser de membresía B tiene un descuento del 15%, el total a pagar es ${valor-desc}`)
+        }
+        else if(membresía == "C"){
+            desc= valor*0.20
+            console.log(`Por ser de membresía C tiene un descuento del 20%, el total a pagar es ${valor-desc}`)
+        }
     }
     else{
-        console.log(`CHALE, NO PUEDO MARTA :"C`)
+        console.log(`El total a pagar de su compra es:`)
     }
+
         
   })
